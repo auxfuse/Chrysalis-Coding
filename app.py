@@ -71,7 +71,7 @@ def register():
             return redirect(url_for('index'))
         else:
             flash(f'Duplicate account detected. Please try again!', 'danger')
-            return redirest(url_for('register'))
+            return redirect(url_for('register'))
     
     return render_template('register.html', title='Register', form=register_form)
 
